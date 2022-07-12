@@ -3,9 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Navbar.module.scss';
 
-// interface Props {
-//     href: string 
-//   }
+
   
 
 const Navbar = () => {
