@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import React, { ReactNode } from "react";
+import Navbar from '../navbar/Navbar';
+import styles from '../../styles/Home.module.scss';
 
 interface Props {
   title?: string,
@@ -16,9 +18,9 @@ export const Layout = ( { children, title }: Props ) => {
         <meta name="keywords" content={`${ title }, pokemon, pokedex`} />
     </Head>
 
-    {/* <Navbar /> */}
+    <Navbar />
 
-    <main
+    <main className={styles.container}
     >{children}
     </main>
    </>
