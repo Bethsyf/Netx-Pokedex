@@ -1,7 +1,7 @@
 import { NextPage, GetStaticProps } from 'next'
-import Image from 'next/image';
 import pokeApi from '../api/pokeApi';
 import { Layout } from '../components/layouts';
+import { PokemonCard } from '../components/pokemon/PokemonCard';
 import { PokemonlistResponse, SmallPokemon } from '../interfaces/pokemon-list';
 import styles from '../styles/Home.module.scss'
 
@@ -15,20 +15,8 @@ const HomePage: NextPage<Props> = ( {pokemons} ) => {
     <Layout title='Listado de Pokémons'>
       <div className={ styles.grid}>
         {
-        pokemons.map( ({id, name, img}) => (
-          <div className={ styles.card} key={ id }>
-            <Image 
-              src={img} 
-              alt={name}
-               width={150} 
-               height={150} 
-               placeholder='blur'
-               blurDataURL={img}
-            />
-
-            <h3>{ name }</h3>
-            <h3>#{ id }</h3>
-          </div>         
+        pokemons.map( (pokemon ) => (
+          <PokemonCard key={pokemon.id} pokemon={ pokemon } />         
         ))
         }
       </div>
