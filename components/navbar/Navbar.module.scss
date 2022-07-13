@@ -5,11 +5,14 @@
     align-items: center;  
     justify-content: start;
     padding: 0x 20px;
-    background-color: rgb(25, 137, 230);    
+    background: linear-gradient(to top, #f4fab9 0%, #3988e2 100%);
+    color: rgb(19, 19, 105);
 }
 .link {
     display: flex;
     justify-content: flex-end;
     width: 100%;   
-    margin: 10px; 
+    margin: 30px; 
+    color: rgb(236, 236, 9);
+    font-weight: bolder;
 }

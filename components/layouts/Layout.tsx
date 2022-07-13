@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React, { ReactNode } from "react";
 import Navbar from '../navbar/Navbar';
-import styles from '../../styles/Home.module.scss';
+import styles from './Layout.module.scss';
 
 interface Props {
   title?: string,

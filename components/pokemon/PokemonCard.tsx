@@ -12,6 +12,7 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
   return (
 
     <div className={styles.card} key={pokemon.id}>
+      <div className={styles.card2}>
       <Image
         src={pokemon.img}
         alt={pokemon.name}
@@ -24,6 +25,7 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
         <h3>{pokemon.name}</h3>
         <h3>#{pokemon.id}</h3>
       </div>
+    </div>
     </div>
 
   )
