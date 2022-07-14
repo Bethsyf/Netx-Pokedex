@@ -2,7 +2,9 @@ import { GetStaticProps, NextPage } from 'next';
 import { GetStaticPaths } from 'next'
 import { useRouter } from 'next/router';
 import React from 'react'
+import pokeApi from '../../api/pokeApi';
 import { Layout } from '../../components/layouts'
+import { Pokemon } from '../../interfaces/pokemon-full';
 
 interface Props {
   pokemon: any;
@@ -10,12 +12,11 @@ interface Props {
 }
 
 const PokemonPage: NextPage<Props> = ({ pokemon }) => {
-
-
+ console.log(pokemon);
 
   return (
     <Layout title='algun pokémon'>
-      <h1>Temporal</h1>
+      <h1>{pokemon.name}</h1>
     </Layout>
   )
 }
@@ -40,12 +41,12 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
   const { id } = params as { id: string }
 
 
-  // const { data } = await pokeApi.get<PokemonlistResponse>('/pokemon?limit=151')
+  const { data } = await pokeApi.get<Pokemon>(`/pokemon/${ id }`)
   
 
   return {
     props: {
-      pokemon: 'bet'
+      pokemon: data
     }
   }
 }
