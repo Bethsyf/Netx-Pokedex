@@ -1,13 +1,15 @@
 import { GetStaticProps, NextPage } from 'next';
 import { GetStaticPaths } from 'next'
-import { useRouter } from 'next/router';
+import Image from 'next/image';
 import React from 'react'
 import pokeApi from '../../api/pokeApi';
 import { Layout } from '../../components/layouts'
 import { Pokemon } from '../../interfaces/pokemon-full';
+import styles from '../../styles/pokemon.module.scss'
+
 
 interface Props {
-  pokemon: any;
+  pokemon: Pokemon;
   
 }
 
@@ -15,8 +17,49 @@ const PokemonPage: NextPage<Props> = ({ pokemon }) => {
  console.log(pokemon);
 
   return (
-    <Layout title='algun pokémon'>
-      <h1>{pokemon.name}</h1>
+    <Layout title={pokemon.name}>      
+      <div className={ styles.container}>
+        <div className={ styles.card1}>
+          <Image 
+            src={ pokemon.sprites.other?.dream_world.front_default || '/no-image.png' } 
+            alt={pokemon.name}
+            width={150}
+            height={150}          
+          />
+        </div>
+        <div className={ styles.card2}>
+          <div className={ styles.container2}>
+            <h1>{pokemon.name}</h1>
+            <button className={ styles.btn}>Guardar en Favoritos</button>
+          </div>          
+          <p>Sprites:</p>
+          <Image 
+            src={ pokemon.sprites.front_default || '/no-image.png' } 
+            alt={pokemon.name}
+            width={100}
+            height={100}          
+          />
+          <Image 
+            src={ pokemon.sprites.back_default || '/no-image.png' } 
+            alt={pokemon.name}
+            width={100}
+            height={100}          
+          />
+          <Image 
+            src={ pokemon.sprites.front_shiny || '/no-image.png' } 
+            alt={pokemon.name}
+            width={100}
+            height={100}          
+          />
+          <Image 
+            src={ pokemon.sprites.back_shiny || '/no-image.png' } 
+            alt={pokemon.name}
+            width={100}
+            height={100}          
+          />          
+        </div>
+      </div>
+
     </Layout>
   )
 }
