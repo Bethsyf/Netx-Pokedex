@@ -6,6 +6,7 @@ import pokeApi from '../../api/pokeApi';
 import { Layout } from '../../components/layouts'
 import { Pokemon } from '../../interfaces/pokemon-full';
 import styles from '../../styles/pokemon.module.scss'
+import localFavorites from '../../utils/localFavorites';
 
 
 interface Props {
@@ -14,7 +15,10 @@ interface Props {
 }
 
 const PokemonPage: NextPage<Props> = ({ pokemon }) => {
- console.log(pokemon);
+
+ const onToggleFavorite = () => {
+  localFavorites.toggleFavorite(pokemon.id);
+ }
 
   return (
     <Layout title={pokemon.name}>      
