@@ -6,7 +6,7 @@ interface Props {
     pokemons: number[];
 }
 
-const FavoritesPokemons: FC<Props> = ({ pokemons }): JSX.Element => {
+const FavoritesPokemons = ({ pokemons }) => {
   return (
     <div className={styles.container}>
         {

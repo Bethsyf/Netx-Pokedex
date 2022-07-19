@@ -14,10 +14,11 @@ interface Props {
 
 const PokemonPage: NextPage<Props> = ({ pokemon }) => {
 
-  const [isInFavorites, setIsInFavorites] = useState(localFavorites.existInFavorites(pokemon.id));
+  const [isInFavorites, setIsInFavorites] = useState( localFavorites.existInFavorites( pokemon.id ) );
 
  const onToggleFavorite = () => {
   localFavorites.toggleFavorite(pokemon?.id);
+  setIsInFavorites( !isInFavorites );
  }
 
   return (
@@ -37,7 +38,7 @@ const PokemonPage: NextPage<Props> = ({ pokemon }) => {
           <div className={ styles.container2}>
             <h1>{pokemon?.name}</h1>
             <button className={ styles.btn} onClick={onToggleFavorite} >
-              Guardar en Favoritos
+             { isInFavorites ? "Borrar de Favoritos" : "Guardar en Favoritos"}
             </button>
           </div>          
           <p>Sprites:</p>
