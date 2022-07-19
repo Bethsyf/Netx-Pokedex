@@ -8,7 +8,7 @@ interface Props {
   pokemon: SmallPokemon
 }
 
-export const PokemonCard: FC<Props> = ({ pokemon }) => {
+export const PokemonCard = ({ pokemon }: Props) => {
 
   const router = useRouter();
   const onClick = () => {

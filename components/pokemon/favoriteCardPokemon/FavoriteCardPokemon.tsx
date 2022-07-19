@@ -5,7 +5,7 @@ interface Props {
     pokemonId: number;
 }
 
-const FavoriteCardPokemon = ( {pokemonId} ) => {
+const FavoriteCardPokemon = ( {pokemonId}: Props ) => {
     const router = useRouter();
 
     const onFavoriteClicked = () => {
