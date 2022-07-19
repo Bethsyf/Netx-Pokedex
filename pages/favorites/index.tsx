@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Layout } from '../../components/layouts'
 import NoFavorites from '../../components/NoFavorites/NoFavorites'
 import localFavorites from '../../utils/localFavorites'
-import FavoritesPokemons from '../../components/Favorites/FavoritesPokemons';
+import FavoritesPokemons from '../../components/pokemon/favorites/FavoritesPokemons';
 import styles from '../../styles/favorites.module.scss'
 
 const FavoritesPage = () => {

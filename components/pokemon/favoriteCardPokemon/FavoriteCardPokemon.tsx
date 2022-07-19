@@ -5,7 +5,7 @@ interface Props {
     pokemonId: number;
 }
 
-const FavoriteCardPokemon = ({ pokemonId }) => {
+const FavoriteCardPokemon = ( {pokemonId} ) => {
     const router = useRouter();
 
     const onFavoriteClicked = () => {
@@ -16,10 +16,10 @@ const FavoriteCardPokemon = ({ pokemonId }) => {
     <div onClick={ onFavoriteClicked }>
         <Image
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${ pokemonId }.svg`}
-          alt={pokemonId}
+          alt='{pokemonId}'
           width={'100%'}
           height={ 140 }          
-        />
+        />        
     </div>
   )
 }

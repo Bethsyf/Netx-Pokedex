@@ -1,7 +1,7 @@
 import { NextPage, GetStaticProps } from 'next'
 import pokeApi from '../api/pokeApi';
 import { Layout } from '../components/layouts';
-import { PokemonCard } from '../components/pokemon/PokemonCard';
+import { PokemonCard } from '../components/pokemon/PokemonCard/PokemonCard';
 import { PokemonlistResponse, SmallPokemon } from '../interfaces/pokemon-list';
 import styles from '../styles/Home.module.scss'
 

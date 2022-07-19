@@ -1,6 +1,6 @@
+
 import FavoriteCardPokemon from '../favoriteCardPokemon/FavoriteCardPokemon';
 import styles from '../Favorites/FavoritePokemon.module.scss'
-
 
 interface Props {
     pokemons: number[];

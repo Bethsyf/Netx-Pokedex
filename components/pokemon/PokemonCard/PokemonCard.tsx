@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import { FC } from 'react';
-import { SmallPokemon } from '../../interfaces/pokemon-list';
 import styles from './PokemonCard.module.scss'
 import { useRouter } from 'next/router';
-
+import { SmallPokemon } from '../../../interfaces/pokemon-list';
 
 interface Props {
   pokemon: SmallPokemon
