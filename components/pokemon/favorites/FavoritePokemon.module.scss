@@ -1,5 +1,13 @@
-.container{
-    gap: 2%;
-    flex-direction: row;
-    justify-content: flex-start;
+.general{
+    height: 100vh;
+}
+.container{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    height: '100vh';
 }

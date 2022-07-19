@@ -41,7 +41,8 @@ const PokemonPage: NextPage<Props> = ({ pokemon }) => {
              { isInFavorites ? "Borrar de Favoritos" : "Guardar en Favoritos"}
             </button>
           </div>          
-          <p>Sprites:</p>
+          <p className={ styles.title}>Sprites:</p>
+          <div className={ styles.container3}>
           <Image 
             src={ pokemon?.sprites?.front_default || '/no-image.png' } 
             alt={pokemon?.name}
@@ -66,6 +67,7 @@ const PokemonPage: NextPage<Props> = ({ pokemon }) => {
             width={100}
             height={100}          
           />          
+        </div>
         </div>
       </div>
     </Layout>

@@ -8,12 +8,14 @@ interface Props {
 
 const FavoritesPokemons = ({ pokemons }: Props) => {
   return (
+    <div className={styles.general}>
     <div className={styles.container}>
         {
         pokemons.map( id => (
             <FavoriteCardPokemon key={ id } pokemonId={ id } />          
         ))
     }
+    </div>
     </div>
   )
 }
