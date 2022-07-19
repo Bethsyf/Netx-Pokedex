@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Layout } from '../../components/layouts'
 import { Pokemon } from '../../interfaces/pokemon-full';
 import localFavorites from '../../utils/localFavorites';
-import styles from '../../styles/pokemon.module.scss'
+import styles from '../../styles/pokemon.module.scss';
 import { getPokemonInfo } from '../../utils/getPokemonInfo';
 
 interface Props {

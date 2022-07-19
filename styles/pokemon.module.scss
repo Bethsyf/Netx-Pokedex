@@ -26,16 +26,16 @@
 
 .container2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 0;    
 }
+
 .container3 {    
     margin-top: 10%;
 }
 
-.btn {
-    margin: 25px;
+.btn {   
     border-radius: 5px;
     padding: 1em 2em;
     background: linear-gradient(117deg, rgb(254, 237, 80), rgb(254, 196, 70));
@@ -54,28 +54,30 @@
         display: block; 
         position: relative;     
         padding: 10px; 
-        text-align: center;     
-        font-size: x-large;
+        text-align: center;           
     }
     .container2 {        
         position: absolute;
-        top: 1% ;
-        display: block;         
-        width: 100vw;        
+        top: 1% ;              
+        width: 100vw;
+        margin-top: 30px;          
     }
     .container3 {        
         display: grid;
         align-items: center;
-        justify-content: space-around;        
+        justify-content: space-around;  
+        margin-top: -20px;      
     }
-    .btn {
-        margin: 0px;          
-    }
+    
     .card2 {        
         padding: 0px;
         margin-top: 10px;
+        height: 80vh;
     }
+
     .card1{
-        margin-bottom: -100px;
+        margin-bottom: -90px;
+        margin-top: 50px;
+        
     }
   }
